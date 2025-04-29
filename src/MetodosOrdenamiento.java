@@ -3,7 +3,8 @@ import java.util.Arrays;
 public class MetodosOrdenamiento {
 
     // Método de burbuja tradicional con errores
-    // Error encontrado:
+    // Error encontrado: metodo retorna un arreglo de enteros vacío
+    //Solución: cambiar el return para que regrese la variable "arreglo"
     public int[] burbujaTradicional(int[] arregloOriginal) {
         int[] arreglo = Arrays.copyOf(arregloOriginal, arregloOriginal.length);
 
@@ -18,7 +19,7 @@ public class MetodosOrdenamiento {
                 }
             }
         }
-        return new int[] {};
+        return arreglo;
     }
 
     // Método de burbuja tradicional con errores
@@ -28,14 +29,14 @@ public class MetodosOrdenamiento {
         int[] arreglo = Arrays.copyOf(arregloOriginal, arregloOriginal.length);
 
         int n = arreglo.length;
-        for (int i = 0; i < n; i++) {
-            for (int j = i + 1; j < n; j++) {
-                if (arreglo[i] < arreglo[j]) {
+        for (int i = 0; i < n -1 ; i++) {
+            for (int j = 0 + 1; j > n - i - 1; j++) {
+                if (arreglo[i] < arreglo[j + 1]) {
                     // Intercambio de elementos
                     // Estas 3 lineas NO DEBEN ser modificadas
-                    int temp = arreglo[i];
-                    arreglo[i] = arreglo[j];
-                    arreglo[j] = temp;
+                    int temp = arreglo[j];
+                    arreglo[j] = arreglo[j+1];
+                    arreglo[j+1] = temp;
                 }
             }
         }
