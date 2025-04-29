@@ -77,6 +77,7 @@ public class App {
         // System.out.println(
         // "Resultado selección Metodo 1: " +
         // java.util.Arrays.toString(arregloInsercionOrdenado3));
+        Benchmarking benchmarking = new Benchmarking();
 
     }
 }
